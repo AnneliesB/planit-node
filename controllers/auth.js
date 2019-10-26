@@ -18,7 +18,7 @@ const signup = async (req, res, next) => {
             let token = jwt.sign({
                 uid: result._id,
                 username: result.username
-            }, config.get('jwt.secret'))
+            }, process.env.secretkey || config.get('jwt.secret'))
 
             res.json({
                 "status": "success",
@@ -46,7 +46,7 @@ const login = async (req, res, next) => {
             let token = jwt.sign({
                 uid: result.user._id,
                 username: result.user.username
-            }, config.get('jwt.secret'))
+            }, process.env.secretkey || config.get('jwt.secret'))
             
             return res.json({
                 "status": "success",
