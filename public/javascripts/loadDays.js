@@ -9,7 +9,7 @@ showFollowingWeek();
 
 
 const loadTodos = () => {
-    fetch(url, {
+    fetch(url+ "todos", {
             "headers": {
                 "Authorization": "Bearer " + localStorage.getItem('token')
             }
