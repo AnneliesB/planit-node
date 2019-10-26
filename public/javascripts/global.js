@@ -1,5 +1,5 @@
-//
 
+checkSession();
 let sanitizeHTML = (str) => {
     let temp = document.createElement('div');
     temp.textContent = str;
