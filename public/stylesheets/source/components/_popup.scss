@@ -1,0 +1,58 @@
+.popup{
+    position: fixed;
+    background-color: $grey;
+    z-index: 101;
+    width: 300px;
+    left: calc(50% - 150px);
+    padding: 0.6em 20px;
+    top: 100px;
+    height: auto;
+    display: block;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0.5em;
+}
+
+.popup__title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Domine', serif;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: lighter;
+    margin-left: 0em;
+    margin-top: 0em;
+    background-color: $planitYellow;
+
+}
+
+.popup__title--deletelist{
+    padding: 0.5em 1em;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.popup__title--addlist{
+    padding: 0.2em 1em;
+    border-top-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.popup__input--container{
+    padding: 3em 1em 0.5em 1em;
+}
+
+.popup__input{
+    font-size: 1em;
+    height: 30px;
+    width: 100%;
+    border: 1px solid $mediumgrey;
+    padding: 0.3em 0.3em 0.3em 1em;
+    border-radius: 2em;
+    font-weight: lighter;
+}
+
+
+

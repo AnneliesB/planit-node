@@ -1,0 +1,78 @@
+.planner__navigation {
+    background-color: $planitYellow;
+    padding: 1em;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.planner__navigation--link{
+    display: flex;
+}
+
+.planner__navigation--logo {
+    width: 100px;
+}
+
+.planner__navigation--menu {
+    font-size: 2.5em;
+    color: $white;
+}
+
+.planner__datepicker {
+    display: flex;
+    align-content: baseline;
+    margin: auto;
+    width: 180px;
+    background-color: $planitYellow;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 1em;
+}
+
+.lists__button--add {
+    display: flex;
+    align-content: baseline;
+    margin: auto;
+    width: 120px;
+    background-color: $planitYellow;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 1em;
+}
+
+.planner__datepicker--currentDate, .lists__button--add--link {
+    padding: 0.5em;
+    margin: 0;
+    color: $white;
+    font-family: 'Domine', serif;
+    cursor: pointer;
+}
+
+.planner__datepicker--arrow {
+    font-size: 2em;
+    color: $white;
+    cursor: pointer;
+}
+
+.planner__navigation--popup {
+    position: fixed;
+    right: 0;
+    top: 72px;
+    width: 25%;
+    background-color: #fdf6d9;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    max-width: 130px;
+    display: none;
+}
+
+.planner__navigation--popup--container p {
+    display: block;
+    text-decoration: none;
+    padding: 0.4em 1.2em;
+    color: black;
+    cursor: pointer;
+}

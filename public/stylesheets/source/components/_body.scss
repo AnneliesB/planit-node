@@ -1,0 +1,44 @@
+body {
+    min-height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.login {
+    background-color: $planitYellow;
+    background-image: url("../../../images/mbg-top.svg"), url("../../../images/mbg-middle.svg"), url("../../../images/mbg-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: top center, 0% 70%, bottom right;
+    background-size: 160px, 60px, 200px;
+    color: $white;
+}
+
+.planner, .lists {
+    background-image: url("../../../images/dbg-top.svg"), url("../../../images/dbg-middle2.svg"), url("../../../images/dbg-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: top right, right center, bottom right;
+    background-size: 350px, 90px, 220px;
+}
+
+.background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    display: none;
+}
+
+@media(min-width: 800px) {
+    .login {
+        background-position: top center, 0% 70%, bottom right;
+        background-size: 160px, 90px, 250px;
+    }
+
+    .planner, .lists{
+        background-image: url("../../../images/dbg-top.svg"), url("../../../images/dbg-middle.svg"), url("../../../images/dbg-bottom.svg");
+        background-position: 15% 0%, 5% 100%, bottom right;
+        background-size: 330px, 200px, 220px;
+    }
+}

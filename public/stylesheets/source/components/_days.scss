@@ -1,0 +1,97 @@
+.planner__week--container, .lists__overview--container {
+    display: flex;
+    justify-content: center;
+}
+
+.planner__day{
+    background-color: $grey;
+    margin: 1em;
+    padding: 0.2em 1em 1.5em 1em;
+    border-radius: 0.5em;
+    min-width: 400px;
+    max-width: 500px;
+}
+
+.planner__todo {
+    display: flex;
+    padding: 0.8em 0em;
+    align-items: center;
+}
+
+.planner__todo--title {
+    font-family: 'Domine', serif;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: lighter;
+    padding: 0.2em 1em;
+    margin-left: -1em;
+    margin-top: -0.7em;
+    background-color: $planitYellow;
+    border-top-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.planner__todo--check {
+    font-size: 1.7em;
+}
+
+.planner__todo--checked {
+    color: $planitYellow;
+}
+
+.planner__todo--unchecked {
+    color: $darkgrey;
+}
+
+.planner__todo--delete{
+    padding-top: 0.2em;
+    margin-left: 0.5em;
+    color: $darkgrey;
+    cursor: pointer;
+    display: none;
+}
+
+.planner__todo--delete:hover {
+    display: inline;
+}
+
+.planner__todo:hover > .planner__todo--delete {
+    display: inline;
+}
+
+.planner__todo--description {
+    padding: 0.2em 0.2em 0.2em 0.7em;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+
+.planner__todo--add {
+    display: flex;
+    padding: 0.8em 0em;
+}
+
+.planner__todo--input {
+    border: none;
+    border-bottom: 1px solid $darkgrey;
+    background-color: transparent;
+    margin-left: 0.7em;
+    width: 250px;
+    font-weight: lighter;
+}
+
+@media(min-width: 800px) {
+    .planner__week, .lists__overview {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+}
+
+@media(min-width: 1000px) {
+    .planner__day {
+        min-width: 500px;
+        max-width: 500px;
+    }
+}

@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='http://localhost:3000/stylesheets/dist/css/app.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' rel='stylesheet')
+    title Planit
+  body.login
+    .form__logo--container
+        img(src='http://localhost:3000/images/logo.svg').form--logo
+
+    div.login__form
+        .login__form--formField
+            label(for="username") Username
+            input(type="text").signup__value--email
+
+        .login__form--formField
+            label(for="password") Password
+            input(type="password").signup__value--password
+        
+        .login__form--formField
+            label(for="password") Repeat password
+            input(type="password").signup__value--repeatPassword
+
+        .login__form--redirect
+            a(href="login") Already have an account?
+
+        .login__form--button
+            button.login__button.login__button--signup SIGN UP
+
+    script(src="/javascripts/config.js")
+    script(src="/javascripts/signup.js")

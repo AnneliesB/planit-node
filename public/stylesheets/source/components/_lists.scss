@@ -1,0 +1,101 @@
+.planner__week--container, .lists__overview--container {
+    display: flex;
+    justify-content: center;
+}
+
+.lists__list{
+    background-color: $grey;
+    margin: 1em;
+    padding: 0.2em 1em 1.5em 1em;
+    border-radius: 0.5em;
+    min-width: 400px;
+    max-width: 500px;
+}
+
+.list__todo {
+    display: flex;
+    padding: 0.8em 0em;
+    align-items: center;
+}
+
+.list__title--container{
+    margin-top:-0.1em;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.list__todo--title {
+    font-family: 'Domine', serif;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: lighter;
+    padding: 0.2em 1em;
+    margin-left: -1em;
+    margin-top: -0.1em;
+    background-color: $planitYellow;
+    border-top-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+.list__delete{
+    padding-top: 0.5em;
+    color: $mediumdarkgrey;
+    cursor: pointer;
+}
+
+.list__todo--check {
+    font-size: 1.7em;
+}
+
+.list__todo--check--checked {
+    color: $planitYellow;
+}
+
+.list__todo--check--unchecked {
+    color: $darkgrey;
+}
+
+.list__todo--delete{
+    padding-top: 0.2em;
+    margin-left: 0.5em;
+    color: $darkgrey;
+    cursor: pointer;
+    display: none;
+}
+
+.list__todo--delete:hover {
+    display: inline;
+}
+
+.list__todo:hover > .list__todo--delete {
+    display: inline;
+}
+
+.list__todo--description {
+    padding: 0.2em 0.2em 0.2em 0.7em;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: lighter;
+}
+
+.list__todo--add {
+    display: flex;
+    padding: 0.8em 0em;
+}
+
+.list__todo--input {
+    border: none;
+    border-bottom: 1px solid $darkgrey;
+    background-color: transparent;
+    margin-left: 0.7em;
+    width: 250px;
+    font-weight: lighter;
+}
+
+@media(min-width: 1000px) {
+    .lists__list {
+        min-width: 500px;
+        max-width: 500px;
+    }
+}

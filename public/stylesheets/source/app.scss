@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+@import 'variables';
+@import 'components/body';
+@import 'components/forms';
+@import 'components/btn';
+@import 'components/navigation';
+@import 'components/days';
+@import 'components/popup';
+@import 'components/lists';
+

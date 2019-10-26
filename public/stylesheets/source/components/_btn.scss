@@ -1,0 +1,45 @@
+.login__button{
+    width: 100%;
+    cursor: pointer;
+    background-color: $white;
+    color: $planitYellow;
+    padding: 0.5em 1.5em 0.5em 0.5em;
+    font-size: 1em;
+    font-weight: lighter;
+    background-image: url("../../../images/userbtn.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: contain;
+    border: none;
+    box-shadow: $buttonShadow;
+}
+
+.popup__button--container{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 0.5em;
+}
+
+.popup__button{
+    width: 47.5%;
+    display: block;
+    font-weight: lighter;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0.2em 0.5em;
+    border-radius: 1.5em;
+}
+
+.popup__button--cancel-add, .popup__button--cancel-delete{
+    margin: 1.5em 2.5% 0.5em 0%;
+    background-color: $white;
+    border: 1px solid $planitYellow;
+}
+
+.popup__button--save-add, .popup__button--save-delete{
+    margin: 1.5em 0% 0.5em 2.5%;
+    background-color: $planitYellow;
+    color: $white;
+    border: 1px solid $planitYellow;
+}

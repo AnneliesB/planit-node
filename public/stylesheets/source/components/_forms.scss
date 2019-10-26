@@ -1,0 +1,57 @@
+.form__logo--container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 6em;
+}
+
+.form--logo {
+    width: 250px;
+}
+
+.login__form {
+    padding-top: 4em;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.login__form--formField {
+    display: block;
+    width: 100%;
+    padding: 1em;
+}
+
+.login__form--formField label{
+    font-weight: lighter;
+    display: block;
+    padding-bottom: 0.8em;
+    font-size: 1.3em;
+}
+
+.login__form--formField input{
+    font-size: 1em;
+    height: 40px;
+    width: 100%;
+    border: 1px solid $planitYellow;
+    padding: 0.3em 0.3em 0.3em 1em;
+    border-radius: 2em;
+    font-weight: lighter;
+}
+
+.login__form--button{
+    width: 45%;
+    max-width: 215px;
+    margin: auto;
+}
+
+.login__form--redirect{
+    padding: 1em 0em 3em 0em;
+    text-align: center;
+}
+
+.login__form--redirect a{
+    color: white;
+    font-size: 0.9em;
+    text-decoration: none;
+}
