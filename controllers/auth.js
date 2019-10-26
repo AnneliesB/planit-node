@@ -24,14 +24,24 @@ const signup = async (req, res, next) => {
 
 }
 
-const login = (req, res, next) => {
-
-    // signup
-
-    // username uit request halen
-    // wachtwoord uit request halen
-    // becrypt encrypt
-    //databank
+const login = async (req, res, next) => {
+    const {
+        user
+    } = await User.authenticate()(req.body.username, req.body.password)
+        .then(result => {
+            res.json({
+                "status": "success",
+                "data":{
+                    "user": result
+                }
+            })
+        })
+        .catch(error => {
+            res.json({
+                "status": "error",
+                "message": error
+            })
+        });
 }
 module.exports.signup = signup;
 module.exports.login = login;
