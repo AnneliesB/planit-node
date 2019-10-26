@@ -9,10 +9,11 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const todosRouter = require('./routes/todo');
 const passport = require('./passport/passport');
+const config = require('config');
 
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
-mongoose.connect('mongodb://localhost:27017/todosapp', {useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(config.get('Database.conn'), {useNewUrlParser: true, useUnifiedTopology: true });
 
 const app = express();
 
