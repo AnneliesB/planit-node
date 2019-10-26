@@ -21,7 +21,7 @@ function addTodoListener() {
 }
 
 function addTodo(text, date, user, target, todoContainer) {
-    fetch(url + "todos", {
+    fetch(url, {
         method: "post",
             "headers": {
                 "Content-Type": 'application/json',
