@@ -2,7 +2,6 @@ const Todo = require('../models/Todo');
 
 const getAll = (req, res) => {
     Todo.find({
-        "user": "Spammelies"
     }, (err, docs) => {
         if (!err) {
             res.json({

@@ -22,7 +22,7 @@ const loadTodos = () => {
             let todosArray = [];
 
             for (let i = 0; i < todos.length; i++) {
-                if (todos[i].user == localStorage.getItem('user') && todos[i].removed != 1) {
+                if (todos[i].user == localStorage.getItem('user') && todos[i].removed != true) {
                     todosArray.push(todos[i]);
                 }
             }
