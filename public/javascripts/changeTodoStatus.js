@@ -11,12 +11,12 @@ function updateStatus() {
                 let id = icon.dataset.id;
                 let status = icon.dataset.status;
                 let newStatus;
-                if (status == 0) {
-                    newStatus = 1;
+                if (status === "false") {
+                    newStatus = true;
                 } else {
-                    newStatus = 0;
+                    newStatus = false;
                 }
-                let removed = 0;
+                let removed = false;
                 let option = "status";
                 statusFetch(id, newStatus, icon, removed, option);
             }
@@ -27,7 +27,7 @@ function updateStatus() {
 }
 
 function statusFetch(id, status, icon, removed, option) {
-    fetch(url + "api/v1/todos", {
+    fetch(url + "todos", {
             method: "put",
             "headers": {
                 "Content-Type": 'application/json',
@@ -35,7 +35,7 @@ function statusFetch(id, status, icon, removed, option) {
             },
             body: JSON.stringify({
                 "id": id,
-                "status": status,
+                "completed": status,
                 "removed": removed
             })
         })

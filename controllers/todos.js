@@ -44,5 +44,31 @@ const create = (req, res, next) => {
     });
 }
 
+
+let put = (req, res) => {
+    console.log(req.body);
+    Todo.updateOne({
+        _id: req.body.id
+    }, {
+        completed: req.body.completed,
+        removed:req.body.removed
+    }, {
+        new: true
+    }, (err, doc) => {
+        if (!err) {
+            res.json({
+                "status": "success",
+                "todoStatus": req.body.completed
+            })
+        } else {
+            res.json({
+                "status": "failed",
+                "todoStatus": req.body.completed
+            })
+        }
+    });
+}
+
 module.exports.getAll = getAll;
 module.exports.create = create;
+module.exports.put = put;
