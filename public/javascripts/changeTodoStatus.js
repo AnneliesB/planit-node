@@ -27,7 +27,7 @@ function updateStatus() {
 }
 
 function statusFetch(id, status, icon, removed, option) {
-    fetch(url, {
+    fetch(url + "todos", {
             method: "put",
             "headers": {
                 "Content-Type": 'application/json',
