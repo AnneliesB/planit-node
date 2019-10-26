@@ -1,8 +1,0 @@
-{
-    "Database": {
-        "conn": "mongodb+srv://planitnodejs:MFFOc2GN8Qg7tXtu@cluster0-r8eqw.mongodb.net/test?retryWrites=true&w=majority"
-    },
-    "jwt": {
-        "secret": "SuperGeheimWachtwoord"
-    }
-}
