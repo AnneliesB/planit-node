@@ -14,6 +14,6 @@ function forEach(array, callback, scope) {
 
 function checkSession() {
     if (localStorage.getItem("token") === null) {
-        window.location.href = "/login";
+        window.location.href = url + "login";
     }
 }
