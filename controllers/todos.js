@@ -2,7 +2,7 @@ const Todo = require('../models/Todo');
 
 const getAll = (req, res) => {
     Todo.find({
-        "user": "jos"
+        "user": "Spammelies"
     }, (err, docs) => {
         if (!err) {
             res.json({
@@ -21,6 +21,7 @@ const create = (req, res, next) => {
     let todo = new Todo();
     todo.text = req.body.text;
     todo.user = req.body.user;
+    todo.date = req.body.date;
     todo.completed = req.body.completed;
     todo.save((err, doc) => {
 

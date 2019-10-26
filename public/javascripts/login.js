@@ -28,7 +28,7 @@ function doLogin(){
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                "username": email,
+                "username": username,
                 "password": password
             })
         }).then(response => {
@@ -39,7 +39,7 @@ function doLogin(){
             if (json.status === "success") {
                 let token = json.data.token;
                 localStorage.setItem("token", token);
-                localStorage.setItem("user", email);
+                localStorage.setItem("user", username);
                 window.location.href = url;
             } else {
                 console.log("epic fail");

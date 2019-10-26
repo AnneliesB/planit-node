@@ -15,13 +15,13 @@ const signup = async (req, res, next) => {
     await user.save()
         .then(result => {
             let token = jwt.sign({
-                uid:result._id,
+                uid: result._id,
                 username: result.username
             }, "MyVerySecretWord")
 
             res.json({
                 "status": "success",
-                "data":{
+                "data": {
                     "token": token
                 }
             })
@@ -35,10 +35,23 @@ const signup = async (req, res, next) => {
 const login = async (req, res, next) => {
     await User.authenticate()(req.body.username, req.body.password)
         .then(result => {
-            res.json({
+            if (!result.user) {
+                return res.json({
+                    "status": "failed",
+                    "message": "Login failed"
+                })
+            }
+
+            let token = jwt.sign({
+                uid: result.user._id,
+                username: result.user.username
+            }, "MyVerySecretWord")
+            
+            return res.json({
                 "status": "success",
                 "data": {
-                    "user": result
+                    "token": token,
+                    "username": result.user.username
                 }
             })
         })

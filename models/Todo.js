@@ -6,6 +6,7 @@ const todoSchema = new Schema({
         required: true
     },
     user: String,
+    date: String,
     completed: Boolean
 });
 
