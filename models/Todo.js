@@ -7,7 +7,8 @@ const todoSchema = new Schema({
     },
     user: String,
     date: String,
-    completed: Boolean
+    completed: Boolean,
+    removed: Boolean
 });
 
 const Todo = mongoose.model('Todo', todoSchema);

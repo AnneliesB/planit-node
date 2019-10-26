@@ -23,6 +23,7 @@ const create = (req, res, next) => {
     todo.user = req.body.user;
     todo.date = req.body.date;
     todo.completed = req.body.completed;
+    todo.removed = req.body.removed;
     todo.save((err, doc) => {
 
         if (err) {
