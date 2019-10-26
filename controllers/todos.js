@@ -15,8 +15,6 @@ const getAll = (req, res) => {
 }
 
 const create = (req, res, next) => {
-
-    console.log(req.body);
     let todo = new Todo();
     todo.text = req.body.text;
     todo.user = req.body.user;
@@ -45,7 +43,6 @@ const create = (req, res, next) => {
 
 
 let put = (req, res) => {
-    console.log(req.body);
     Todo.updateOne({
         _id: req.body.id
     }, {
