@@ -39,7 +39,7 @@ app.use('/users', usersRouter);
  */
 // 404
 app.use(function(req, res, next) {
-  return res.status(404).send({ message: 'Route'+req.url+' Not found.' });
+  return res.status(404).redirect("/"), indexRouter;
 });
 
 // 500 - Any server error
