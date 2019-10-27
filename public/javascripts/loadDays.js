@@ -2,6 +2,8 @@ let weekContainer = document.querySelector(".planner__week");
 
 let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
+let thisWeek = document.querySelector(".planner__datepicker--currentDate");
+
 loadDays(days);
 showCurrentWeek();
 showPreviousWeek();
@@ -95,16 +97,17 @@ function showPreviousWeek() {
     previousWeek.addEventListener("click", (e) => {
         let date = removeDays(getWeekDate(), 7);
         setLocalStorageDate(date);
+        weekButtonToggle(date);
         loadDays(days);
         loadTodos();
     });
 }
 
 function showCurrentWeek() {
-    let thisWeek = document.querySelector(".planner__datepicker--currentDate");
-
     thisWeek.addEventListener("click", (e) => {
         localStorage.removeItem('planitdate');
+        let date = "this week";
+        weekButtonToggle(date);
         loadDays(days);
         loadTodos();
     });
@@ -116,19 +119,41 @@ function showFollowingWeek() {
     followingWeek.addEventListener("click", (e) => {
         let date = addDays(getWeekDate(), 7);
         setLocalStorageDate(date);
+        weekButtonToggle(date);
         loadDays(days);
         loadTodos();
     });
+}
+
+function weekButtonToggle(date) {
+    if (date == "this week") {
+        console.log("een");
+        thisWeek.innerHTML = "This week";
+        localStorage.removeItem('planitdate');
+    } else if (getLocalStorageDate() === formatDateYYYYMMDD(getCurrentWeekDate())) {
+        console.log("twee");
+        thisWeek.innerHTML = "This week";
+    } else {
+
+        console.log("drie");
+    
+        thisWeek.innerHTML = "Show this week";
+
+    }
+}
+
+function getCurrentWeekDate(){
+    let today = new Date();
+    let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+    monday = getMonday(new Date(date));
+    return monday;
 }
 
 function getWeekDate() {
     if (getLocalStorageDate() !== null) {
         return getMonday(new Date(getLocalStorageDate()));
     } else {
-        let today = new Date();
-        let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-        monday = getMonday(new Date(date));
-        return monday;
+        return getCurrentWeekDate();
     }
 }
 
