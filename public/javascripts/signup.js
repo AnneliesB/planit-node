@@ -7,20 +7,20 @@ signup.addEventListener("click", (e) => {
     doSignup();
 });
 
-signupPasswordField.addEventListener("keyup", (e) =>{
-    if (e.keyCode == 13){
+signupPasswordField.addEventListener("keyup", (e) => {
+    if (e.keyCode == 13) {
         doSignup();
     }
 });
 
-signupPasswordRepeatField.addEventListener("keyup", (e) =>{
-    if (e.keyCode == 13){
+signupPasswordRepeatField.addEventListener("keyup", (e) => {
+    if (e.keyCode == 13) {
         doSignup();
     }
 });
 
-signupEmailField.addEventListener("keyup", (e) =>{
-    if (e.keyCode == 13){
+signupEmailField.addEventListener("keyup", (e) => {
+    if (e.keyCode == 13) {
         doSignup();
     }
 });
@@ -50,12 +50,16 @@ function doSignup() {
                 localStorage.setItem("user", username);
                 window.location.href = url;
             } else {
-                console.log("epic fail");
+                let error = document.querySelector(".alert");
+                error.innerHTML = "This username is already in use.";
+                error.classList.remove("signup-alert");
             }
         });
 
     } else {
-        console.log("no match");
+        let error = document.querySelector(".alert");
+        error.innerHTML = "Your passwords don't match.";
+        error.classList.remove("signup-alert");
     }
 
 }
