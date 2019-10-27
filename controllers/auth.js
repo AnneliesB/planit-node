@@ -28,7 +28,8 @@ const signup = async (req, res, next) => {
             })
         }).catch(error => {
             res.json({
-                "status": "error"
+                "status": "error",
+                "error": error
             })
         });
 }
