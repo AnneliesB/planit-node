@@ -1,0 +1,42 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='http://localhost:3000/stylesheets/dist/css/normalize.css')
+    link(rel='stylesheet', href='http://localhost:3000/stylesheets/dist/css/app.css')
+    link(rel='shortcut icon' href='http://localhost:3000/images/logo.ico')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Domine:400,700&display=swap' rel='stylesheet')
+    title Planit
+  body.lists
+  nav.planner__navigation
+    a(href="/").planner__navigation--link
+      img(src='http://localhost:3000/images/logo.svg').planner__navigation--logo
+    ion-icon.planner__navigation--menu(name='menu')
+  
+  .planner__navigation--popup
+    .planner__navigation--popup--container
+      p.planner__navigation--popup--planner Planner
+      p.planner__navigation--popup--lists Lists
+      p.planner__navigation--popup--logout Logout
+
+  .lists__button--add
+    p.lists__button--add--link Add list
+    
+
+  .lists__overview--container
+    .lists__overview
+      
+  .background
+
+  script(type='module' src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js')
+  script(nomodule='' src='https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js')
+  script(src="/javascripts/config.js")
+  script(src="/javascripts/global.js")
+  script(src="/javascripts/loadLists.js")
+  script(src="/javascripts/addList.js")
+  script(src="/javascripts/deleteList.js")
+  script(src="/javascripts/addListItem.js")
+  script(src="/javascripts/changeListItemStatus.js")
+  script(src="/javascripts/deleteListItem.js")
+  script(src="/javascripts/navigation.js")
