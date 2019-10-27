@@ -24,7 +24,7 @@ function showPlanner(){
 
     if (plannerButton != null) {
         plannerButton.addEventListener("click", (e) => {
-            window.location.href = url;
+            window.location.href = "/";
         });
     }
 }
@@ -34,7 +34,7 @@ function showLists(){
 
     if (listButton != null) {
         listButton.addEventListener("click", (e) => {
-            window.location.href = url + "/lists";
+            window.location.href = "/lists";
         });
     }
 }
